@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 spotify_song="$(spotify-cli song)"
 spotify_artist="$(spotify-cli artist)"
 spotify_album="$(spotify-cli album)"
@@ -7,6 +9,7 @@ spotify_album="$(spotify-cli album)"
 main() {
   local status_right="$spotify_artist: $spotify_song | %d %b %Y - %l:%M %p"
 
+  tmux bind-key h run "spotify-cli lyrics"
   tmux set-option -gq status-right-length 100
   tmux set-option -gq status-right "$status_right"
 }
