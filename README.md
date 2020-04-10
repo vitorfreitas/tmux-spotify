@@ -22,8 +22,7 @@ set -g @plugin 'vitorfreitas/tmux-spotify'
 ```
 
 ## Lyrics
-In order to see the current song lyrics, you can do it easily with `YOUR_PREFIX
-+ h`.
+In order to see the current song lyrics, you can do it easily with `YOUR_PREFIX + h`.
 
 ## LICENSE
 
