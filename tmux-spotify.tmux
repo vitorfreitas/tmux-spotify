@@ -2,9 +2,9 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-spotify_song="$(spotify-cli song)"
-spotify_artist="$(spotify-cli artist)"
-spotify_album="$(spotify-cli album)"
+spotify_song="#($CURRENT_DIR/scripts/song.sh)"
+spotify_artist="#($CURRENT_DIR/scripts/artist.sh)"
+spotify_album="#($CURRENT_DIR/scripts/album.sh)"
 
 main() {
   local status_right="$spotify_artist: $spotify_song | %d %b %Y - %l:%M %p"
